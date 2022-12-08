@@ -1,0 +1,516 @@
+*,
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Ubuntu";
+    color: #272e44;
+    background: url("../images/fond__accueil.svg") center center/cover no-repeat fixed;
+
+}
+
+header {
+    height: 15vh;
+}
+
+header nav {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header .nav__gauche {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 10%;
+    background: url("../images/logo.png") center/cover;
+    float: left;
+}
+
+header .nav__droite {
+    height: 100%;
+    width: 60%;
+    float: right;
+}
+
+header .nav__liste {
+    height: 100%;
+}
+
+header .nav__item {
+    float: left;
+    width: calc(100% / 4);
+    height: 100%;
+}
+
+header .nav__ancre {
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+header .nav__active {
+    background-color: #272e44;
+    border-radius: 3px;
+}
+
+header .nav__ancre::after {
+    position: absolute;
+    content: "";
+    background-color: #272e44;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all .5s linear;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+header .nav__ancre:hover::after {
+    height: 100%;
+}
+
+main {
+    z-index: 99;
+    height: 75vh;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+main>div {
+    height: 100%;
+    width: 45vw;
+    float: left;
+}
+
+.conteneur_gauche .conteneur_cartes {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.conteneur_cartes .cartes {
+    float: left;
+    height: 37.5vh;
+    width: 11.9vw;
+    padding: 5px;
+}
+
+.cartes_haut {
+    background-color: white;
+    height: 12vh;
+    width: 12vh;
+    margin: 0 auto;
+}
+
+.cartes:nth-child(1) .cartes_haut {
+    background: url("../images/menu/2.png") center center/cover;
+}
+
+.cartes:nth-child(2) .cartes_haut {
+    background: url("../images/menu/1.png") center center/cover;
+}
+
+.cartes:nth-child(3) .cartes_haut {
+    background: url("../images/menu/3.png") center center/cover;
+}
+
+.cartes:nth-child(4) .cartes_haut {
+    background: url("../images/menu/4.png") center center/cover;
+}
+
+.cartes:nth-child(5) .cartes_haut {
+    background: url("../images/menu/6.png") center center/cover;
+}
+
+.cartes:nth-child(6) .cartes_haut {
+    background: url("../images/menu/5.png") center center/cover;
+}
+
+.cartes_centre {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.cartes_centre h2 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    color: whitesmoke;
+}
+
+.cartes_bas {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    border: transparent;
+    background-color: #272e44;
+    color: #f8cacc;
+}
+
+button:hover {
+    background-color: #f8cacc;
+    color: #272e44;
+    cursor: pointer;
+}
+
+main .conteneur_droite {
+    background: url("../images/menu/tableau.jpg") center center/cover;
+    border-radius: 30px;
+}
+
+#titre {
+    text-align: center;
+    height: 7.5vh;
+    width: 100%;
+    font-size: 2vh;
+    color: whitesmoke;
+}
+
+#titre h3 {
+    font-family: "Rock Salt", sans-serif;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#ingredients {
+    width: 100%;
+    height: 33.5vh;
+    border-top: 2px dashed whitesmoke;
+    border-bottom: 2px dashed whitesmoke;
+}
+
+#ingredients_ramen {
+    border-right: 2px dashed whitesmoke;
+}
+
+#ingredients_ramen,
+#ingredients_bouillon {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#ingredients_ramen div:first-child,
+#ingredients_bouillon div:first-child {
+    height: 20%;
+}
+
+#ingredients_ramen div:last-child,
+#ingredients_bouillon div:last-child {
+    padding: 5px;
+    height: 80%;
+}
+
+#ingredients h3,
+#ingredients p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: whitesmoke;
+}
+
+#ingredients h3 {
+    font-family: "Indie Flower", serif;
+    text-align: center;
+}
+
+#ingredients p {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 120%;
+}
+
+.boissons,
+.extras {
+    height: 34vh;
+    width: 25%;
+    float: left;
+    border-right: 2px dashed whitesmoke;
+}
+
+
+.boissons > div {
+    height: 20%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.extras > div {
+    height: calc(100% / 6);
+    text-align: center;
+    color: whitesmoke;
+}
+
+.boissons div h3,
+.extras div h3 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boissons div div,
+.extras div div {
+    height: 50%;
+}
+
+.boissons div div *,
+.extras div div *  {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boissons input,
+.extras input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: rgba(245, 245, 245, 0.5);
+    transition: all .5s;
+}
+
+.boissons input:hover,
+.extras input:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.boissons input:checked,
+.extras input:checked {
+    background-color: palegreen;
+}
+
+.boissons h3,
+.extras h3 {
+    font-family: "Indie Flower", serif;
+}
+
+.boissons p,
+.extras p {
+    font-family: "Shadows Into Light", cursive;
+}
+
+.format, .prix {
+    height: 17vh;
+    width: 50%;
+    float: right;
+    color: whitesmoke;
+}
+
+.format {
+    border-bottom: 2px dashed whitesmoke;
+}
+
+.format > div:first-child {
+    height: 20%;
+}
+
+.format h3,
+.prix h3 {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Indie Flower", serif;
+}
+
+.format .conteneur {
+    height: 80%;
+}
+
+.conteneur > div {
+    float: left;
+    height: 100%;
+    width: calc(100% / 3);
+}
+
+.conteneur > div div {
+    width: 100%;
+    height: calc(100% / 3);
+}
+
+.conteneur h3{
+    font-size: 0.75rem;
+}
+
+.conteneur h3::first-letter {
+    font-size: 1.17rem;
+}
+
+.conteneur p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: "Indie Flower", serif;
+    font-weight: bold;
+    font-size: 1.17rem;
+}
+
+.conteneur input[type="radio"] {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 75%;
+    width: 75%;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 10px;
+    transition: all .5s;;
+}
+
+.conteneur input[type="radio"]:hover {
+    background-color: whitesmoke;
+}
+
+.conteneur input[type="radio"]:checked {
+    background-color: palegreen;
+}
+
+.prix div:first-child {
+    height: 20%;
+    width: 100%;
+}
+
+.prix div:last-child {
+    height: 80%;
+    width: 100%;
+}
+
+.prix div:last-child p {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-family: "Indie Flower", serif;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    transition: all .5s;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 5vh;
+    width: 100vw;
+    background-color: #272e44;
+}
+
+footer>* {
+    width: calc(100% / 3);
+    height: 100%;
+    font-size: 1rem;
+}
+
+footer div p,
+footer div ul li {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f8cacc;
+}
+
+footer .left {
+    float: left;
+    padding-left: 5vw;
+}
+
+footer .center {
+    float: left;
+    text-align: center;
+}
+
+footer .right {
+    float: left;
+    padding-right: 5vw;
+}
+
+footer .social {
+    height: 100%;
+}
+
+footer .social li {
+    float: right;
+    height: 100%;
+}
+
+footer .social li:nth-child(2) {
+    margin: 0 50px;
+}
+
+footer .social li a img {
+    height: 3vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: #f8cacc;
+    animation: 2s overlayAnim forwards;
+}
+
+@keyframes overlayAnim {
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+
+    50% {
+        opacity: .9;
+    }
+
+    90% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 0;
+        top: 100vh;
+        display: none;
+        height: 0;
+    }
+}

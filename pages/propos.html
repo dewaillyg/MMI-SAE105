@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./images/favicon.svg">
+        <link rel="stylesheet" type="text/css" href="../styles/police.css">
+        <link rel="stylesheet" type="text/css" href="../styles/propos.css">
+        <title>&Agrave; Propos</title>
+    </head>
+<body>
+    <header>
+        <nav>
+            <div class="nav__gauche"></div>
+            <div class="nav__droite">
+                <ul class="nav__liste">
+                    <li class="nav__item">
+                        <a class="nav__ancre" href="../index.html">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__ancre" href="./menu.html">Menu</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__ancre nav__active" href="./propos.html">&Agrave; Propos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__ancre" href="./contact.html">Contact</a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="top">
+            <div class="bouton">
+                <div>
+                    <input id="langueAnglaise" type="checkbox">
+                </div>
+                <div>
+                    <label for="langueAnglaise">
+                        <div class="flagEN"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="langFR" class="texte">
+                <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+            </div>
+            <div id="langEN" class="texte">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="left">
+            <p>Ramen Ta Nouille - Food-Truck</p>
+        </div>
+        <div class="center">
+            <p>2022</p>
+        </div>
+        <div class="right">
+            <ul class="social">
+                <li><a href=""><img src="../images/logos/facebook.png" alt="logo Facebook" title="logo Facebook"></a></li>
+                <li><a href=""><img src="../images/logos/instagram.png" alt="logo Instagram" title="logo Instagram"></a></li>
+                <li><a href=""><img src="../images/logos/pinterest.png" alt="logo Pinterest" title="logo Pinterest"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <div class="overlay">
+    </div>
+
+    <script>
+
+        const EN = window.document.getElementById("langueAnglaise");
+        const texteFR = window.document.getElementById("langFR");
+        const texteEN = window.document.getElementById("langEN");
+
+        function changeLangue (EN) {
+            if (EN.checked == false) {
+                texteEN.classList.add("hidden");
+                texteFR.classList.remove("hidden")
+            } else {
+                texteFR.classList.add("hidden");
+                texteEN.classList.remove("hidden")
+            }
+
+            setTimeout('changeLangue(EN)', 500);
+        }
+
+        changeLangue(EN);
+        
+    </script>
+</body>
+</html>
