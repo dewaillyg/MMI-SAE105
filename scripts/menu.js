@@ -195,7 +195,7 @@ function affichageMenu(nbr) {
             for (const boisson in boissons) {
                 boiteBoisson.innerHTML += `
                     <div>
-                        <div><input class="inputBoissons" type="checkbox" onClick="majPrix(${boissons[boisson]})"></div>
+                        <div><input class="inputBoissons" type="checkbox" onClick="majPrix(${boissons[boisson]}, 1)"></div>
                         <div><p>${boisson} ${boissons[boisson]}€</p></div>
                     </div>
                 `;
@@ -205,7 +205,7 @@ function affichageMenu(nbr) {
             for (const extra in extras) {
                 boiteExtras.innerHTML += `
                     <div>
-                        <div><input type="checkbox"></div>
+                        <div><input class="inputExtras" type="checkbox" onClick="majPrix(${extras[extra]}, 2)"></div>
                         <div><p>${extra} ${extras[extra]}€</p></div>
                     </div>
                 `;
@@ -217,17 +217,17 @@ function affichageMenu(nbr) {
                     <div class="conteneurS">
                         <div><h3>S (400ml)</h3></div>
                         <div> <p>${menus[parametres].prix.S}€</p></div>
-                        <div><input type="radio" name="taille"></div>
+                        <div><input class="inputFormats" type="radio" name="taille" onClick="majPrix(0, 3, ${compteur})"></div>
                     </div>
                     <div class="conteneurM">
                         <div><h3>M (600ml)</h3></div>
                         <div><p>${menus[parametres].prix.M}€</p></div>
-                        <div><input type="radio" name="taille" checked></div>
+                        <div><input class="inputFormats" type="radio" name="taille" checked onClick="majPrix(1, 3, ${compteur})"></div>
                     </div>
                     <div class="conteneurL">
                         <div><h3>L (800ml)</h3></div>
                         <div><p>${menus[parametres].prix.L}€</p></div>
-                        <div><input type="radio" name="taille"></div>
+                        <div><input class="inputFormats" type="radio" name="taille" onClick="majPrix(2, 3, ${compteur})"></div>
                     </div>
                 </div>
             `
@@ -236,47 +236,89 @@ function affichageMenu(nbr) {
                 <div><h3>Total</h3></div>
                 <div><p id="prixTotal">${prixTotal}€</p></div>
             `; 
-
         }
         compteur++;
     }
 }
+
+
 
 /* ----------------------------------------
 ------------FONCTION M.A.J PRIX-----------
 -------------------------------------------
 */
 
-function majPrix(prix) {
+var www = 0;
+
+function reset() {
+    www = 0;
+}
+
+function majPrix(prix, boite, menu) {
     const texte = window.document.getElementById("prixTotal");
     const boutonsBoissons = window.document.getElementsByClassName("inputBoissons");
+    const boutonsExtras = window.document.getElementsByClassName("inputExtras");
     const prixBoissons = [];
+    const prixExtras = [];
 
     for (const prix in boissons) {
         prixBoissons.push(boissons[prix]);
     }
 
-    
+    for (const prix in extras) {
+        prixExtras.push(extras[prix]);
+    }
 
-    // switch (prix) {
-    //     case 1 :
-    //         if (boutonsBoissons[0].checked === true) texte.innerHTML = `${prixTotal += prix}`;
-    //         else texte.innerHTML = `${prixTotal -= prix}`;
-    //         break;
-    //     case 1.5 :
-    //         if (boutonsBoissons[1].checked === true) texte.innerHTML = `${prixTotal += prix}`;
-    //         else texte.innerHTML = `${prixTotal -= prix}`;
-    //         break;
-    //     case 2 :
-    //         if (boutonsBoissons[2].checked === true) texte.innerHTML = `${prixTotal += prix}`;
-    //         else texte.innerHTML = `${prixTotal -= prix}`;
-    //         break;
-    //     case 3 :
-    //         if (boutonsBoissons[3].checked === true) texte.innerHTML = `${prixTotal += prix}`;
-    //         else texte.innerHTML = `${prixTotal -= prix}`;
-    //         break;
-    //     default : texte.innerHTML = `${prixTotal}`;
-    // }
+    if (boite === 1) {
+        for (let i = 0; i < prixBoissons.length; i++) {
+            if (prixBoissons[i] === prix && boutonsBoissons[i].checked === true) {
+                texte.innerHTML = `${prixTotal += prixBoissons[i]}€`;
+            } else if (prixBoissons[i] === prix && boutonsBoissons[i].checked === false) {
+                texte.innerHTML = `${prixTotal -= prixBoissons[i]}€`;
+            }
+        }
+    }
+
+    if (boite === 2) {
+        for (let i = 0; i < prixExtras.length; i++) {
+            if (prixExtras[i] === prix && boutonsExtras[i].checked === true) {
+                texte.innerHTML = `${prixTotal += prixExtras[i]}€`;
+            } else if (prixExtras[i] === prix && boutonsExtras[i].checked === false) {
+                texte.innerHTML = `${prixTotal -= prixExtras[i]}€`;
+            }
+        }
+    }
+
+    if (boite === 3) {
+        let compteurB = 1;
+        for (const parametres in menus) {
+            if (compteurB === menu) {
+                if (prix === 0) {
+                    if (www === 0) {
+                        texte.innerHTML = `${prixTotal -= 2}€`;
+                    } else if (www === 1) {
+                        texte.innerHTML = `${prixTotal -= 4}€`;
+                    }
+                    www = -1;
+                } else if (prix === 1) {
+                    if (www === -1) {
+                        texte.innerHTML = `${prixTotal += 2}€`;
+                    } else if (www === 1) {
+                        texte.innerHTML = `${prixTotal -= 2}€`;
+                    }
+                    www = 0;
+                } else if (prix === 2) {
+                    if (www === -1) {
+                        texte.innerHTML = `${prixTotal += 4}€`;
+                    } else if (www === 0) {
+                        texte.innerHTML = `${prixTotal += 2}€`;
+                    }
+                    www = 1;
+                }
+            }
+            compteurB++;
+        }
+    }
 }
 
 /* ------------------------------------------------------------
