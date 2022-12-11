@@ -28,12 +28,14 @@ header nav {
 }
 
 header .nav__gauche {
-    position: absolute;
-    content: "";
-    height: 0;
-    width: 10%;
-    background: url("../images/logo.png") center/cover;
+    height: 100%;
+    width: 12.5vh;
+    height: 7.5vh;
+    background: url("../images/logo.svg") center/cover;
     float: left;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 header .nav__droite {
@@ -159,7 +161,7 @@ main>div {
     transform: translateY(-50%);
     font-size: 1rem;
     font-family: "Raleway", sans-serif;
-    color: whitesmoke;
+    color: #272e44;
 }
 
 .cartes_bas {
@@ -176,14 +178,34 @@ button {
     width: 80%;
     border-radius: 3px;
     border: transparent;
-    background-color: #272e44;
-    color: white;
+    background-color: transparent;
+    color: #272e44;
+    border: 1px solid #272e44;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 button:hover {
-    background-color: #f8cacc;
-    color: #272e44;
     cursor: pointer;
+    color: whitesmoke;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-radius: 3px;
+    left: 0;
+    background-color: #272e44;
+    width: 100%;
+    height: 0%;
+    transition: all .5s;
+}
+
+button:hover::before {
+    height: 100%;
+    z-index: -1;
 }
 
 main .conteneur_droite {
@@ -313,7 +335,7 @@ main .conteneur_droite {
 
 .boissons input:checked,
 .extras input:checked {
-    background-color: palegreen;
+    background-color: #f8cacc;
 }
 
 .boissons h3,
@@ -395,7 +417,7 @@ main .conteneur_droite {
     width: 75%;
     background-color: rgba(245, 245, 245, 0.5);
     border-radius: 10px;
-    transition: all .5s;;
+    transition: all .5s;
 }
 
 .conteneur input[type="radio"]:hover {
@@ -403,7 +425,7 @@ main .conteneur_droite {
 }
 
 .conteneur input[type="radio"]:checked {
-    background-color: palegreen;
+    background-color: #f8cacc;
 }
 
 .prix div:first-child {

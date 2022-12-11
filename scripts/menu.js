@@ -165,6 +165,8 @@ var extras = {
 
 var prixTotal = 0;
 
+var resetPrix = 0;
+
 /* ----------------------------------------
 ------------FONCTION D'AFFICHAGE-----------
 -------------------------------------------
@@ -248,11 +250,6 @@ function affichageMenu(nbr) {
 -------------------------------------------
 */
 
-var www = 0;
-
-function reset() {
-    www = 0;
-}
 
 function majPrix(prix, boite, menu) {
     const texte = window.document.getElementById("prixTotal");
@@ -294,32 +291,42 @@ function majPrix(prix, boite, menu) {
         for (const parametres in menus) {
             if (compteurB === menu) {
                 if (prix === 0) {
-                    if (www === 0) {
+                    if (resetPrix === 0) {
                         texte.innerHTML = `${prixTotal -= 2}€`;
-                    } else if (www === 1) {
+                    } else if (resetPrix === 1) {
                         texte.innerHTML = `${prixTotal -= 4}€`;
                     }
-                    www = -1;
+                    resetPrix = -1;
                 } else if (prix === 1) {
-                    if (www === -1) {
+                    if (resetPrix === -1) {
                         texte.innerHTML = `${prixTotal += 2}€`;
-                    } else if (www === 1) {
+                    } else if (resetPrix === 1) {
                         texte.innerHTML = `${prixTotal -= 2}€`;
                     }
-                    www = 0;
+                    resetPrix = 0;
                 } else if (prix === 2) {
-                    if (www === -1) {
+                    if (resetPrix === -1) {
                         texte.innerHTML = `${prixTotal += 4}€`;
-                    } else if (www === 0) {
+                    } else if (resetPrix === 0) {
                         texte.innerHTML = `${prixTotal += 2}€`;
                     }
-                    www = 1;
+                    resetPrix = 1;
                 }
             }
             compteurB++;
         }
     }
 }
+
+/* ------------------------------------------------------------
+-------------FONCTION RESET PRIX LORS DU CHANGEMENT DE CARTE -----------------
+---------------------------------------------------------------
+*/
+
+function reset() {
+    resetPrix = 0;
+}
+
 
 /* ------------------------------------------------------------
 -------------TITRES DES CARTES DEPUIS JAVASCRIPT-----------------

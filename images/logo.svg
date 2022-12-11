@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.75 330.56">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: Ohm-Bold, Ohm;
+        font-size: 237.83px;
+        font-weight: 700;
+        stroke: #fff;
+        stroke-width: .75px;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.06em;
+      }
+    </style>
+  </defs>
+  <g id="Design">
+    <text class="cls-2" transform="translate(.38 289.51)"><tspan x="0" y="0">su</tspan><tspan class="cls-4" x="246.39" y="0">p</tspan><tspan class="cls-3" x="361.98" y="0">a</tspan></text>
+    <polygon id="Baguette_droite" data-name="Baguette droite" class="cls-1" points="179.09 116.08 371.33 67.24 368.25 55.2 177.36 109.31 179.09 116.08"/>
+    <polygon id="gauche" class="cls-1" points="350.02 72.65 346.65 61.32 351.12 60.05 354.71 71.46 350.02 72.65"/>
+    <polygon id="Baguette_gauche" data-name="Baguette gauche" class="cls-1" points="179.96 113.89 349.23 10.59 342.73 0 176.3 107.93 179.96 113.89"/>
+    <polygon id="droite" class="cls-1" points="328.57 23.21 324.14 12.05 327.78 9.7 332.22 20.97 328.57 23.21"/>
+    <path class="cls-1" d="M161.55,187.81h38.44v41.4s0,25.75-19.22,25.75-19.22-24.18-19.22-24.18v-42.98Z"/>
+  </g>
+</svg>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="./images/favicon.svg">
+        <link rel="shortcut icon" href="../images/favicon.svg">
         <link rel="stylesheet" type="text/css" href="../styles/police.css">
         <link rel="stylesheet" type="text/css" href="../styles/propos.css">
         <title>&Agrave; Propos</title>
@@ -34,41 +34,49 @@
     </header>
 
     <main>
-        <div class="top">
-            <div class="bouton">
-                <div>
-                    <input id="langueAnglaise" type="checkbox">
+        <div class="gauche"><div class="image"></div></div>
+        <section class="droite">
+            <div class="haut">
+                <div class="bouton">
+                    <div>
+                        <input id="langueAnglaise" type="checkbox">
+                    </div>
+                    <div>
+                        <label for="langueAnglaise">
+                            <div class="flagEN"></div>
+                            <p>English</p>
+                        </label>
+                    </div>
                 </div>
-                <div>
-                    <label for="langueAnglaise">
-                        <div class="flagEN"></div>
-                    </label>
+            </div>
+            <div class="bas">
+                <div id="langFR" class="texte">
+                    <p>Supa a le plaisir de vous proposer une large sélection de ramen frais ; servi sur place ou à emporter. Des ramens de la cuisine traditionnelle nippone, réalisés avec des produits frais, de saison, dans un cadre atypique au centre de Rouen. Dégustez-les avec une pinte de bière locale dans une ambiance détendue et conviviale.</p>
+                    <p>Choisissez une de nos compositions ou créez votre propre bol (types de pâtes, sauces, viandes, légumes), notre chef ramen se fera un plaisir de vous conseiller.</p>
+                    <p>J'ai goûté des ramen pour la première fois lors d'un voyage au Japon, et j'y suis tombé amoureux, mais je n'ai jamais réussi à retrouver les saveurs emblématiques des ramen japonais près de chez moi. C'est pourquoi j'ai commencé à cuisiner mes propres bols à la maison, à les faire pour les invités et leur succès a été immédiats. Face à ce succès j'ai acheté et rénové mon premier food truck afin de vous faire découvrir des saveurs que vous ne trouverez qu'au Japon.</p>
+                </div>
+                <div id="langEN" class="texte">
+                    <p>Supa is pleased to offer you a wide selection of fresh ramen; served on the spot, or to take away. Ramens from traditional nippon cuisine, made with fresh, seasonal products, in an atypical setting in the center of Rouen. Enjoy them with a pint of local beer in a relaxed and friendly atmosphere.</p>
+                    <p>Choose one of our compositions or create your own bowl (types of pasta, sauces, meats, vegetables), our ramen chef will be delighted to advice you.</p>
+                    <p>I tasted ramen for the first time on a trop to Japan, and i fell in love, but i never managed to fint the iconic Japanese ramen flavours at home. That's why i started making my own bowls at home, making them for the guests and their success was great. Faced with this success i have bought and renovated my first food truck in order to make you discover flavours that you will only find in Japan.</p>
                 </div>
             </div>
-        </div>
-        <div class="bottom">
-            <div id="langFR" class="texte">
-                <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
-            </div>
-            <div id="langEN" class="texte">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-        </div>
+        </section>
     </main>
 
     
     <footer>
         <div class="left">
-            <p>Ramen Ta Nouille - Food-Truck</p>
+            <p>SUPA Food-Truck</p>
         </div>
         <div class="center">
             <p>2022</p>
         </div>
         <div class="right">
             <ul class="social">
-                <li><a href=""><img src="../images/logos/facebook.png" alt="logo Facebook" title="logo Facebook"></a></li>
-                <li><a href=""><img src="../images/logos/instagram.png" alt="logo Instagram" title="logo Instagram"></a></li>
-                <li><a href=""><img src="../images/logos/pinterest.png" alt="logo Pinterest" title="logo Pinterest"></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/logos/facebook.png" alt="logo Facebook" title="logo Facebook"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="../images/logos/instagram.png" alt="logo Instagram" title="logo Instagram"></a></li>
+                <li><a href="https://www.pinterest.fr/" target="_blank"><img src="../images/logos/pinterest.png" alt="logo Pinterest" title="logo Pinterest"></a></li>
             </ul>
         </div>
     </footer>
@@ -92,7 +100,7 @@
                 texteEN.classList.remove("hidden")
             }
 
-            setTimeout('changeLangue(EN)', 500);
+            setTimeout('changeLangue(EN)', 100);
         }
 
         changeLangue(EN);

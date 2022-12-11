@@ -26,9 +26,13 @@ header nav {
 
 header .nav__gauche {
     height: 100%;
-    width: 10%;
-    background: url("../images/logo.png") center/cover;
+    width: 12.5vh;
+    height: 7.5vh;
+    background: url("../images/logo.svg") center/cover;
     float: left;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 header .nav__droite {
