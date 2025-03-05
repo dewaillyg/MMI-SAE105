@@ -1,13 +1,13 @@
-# 🚚🍜 FoodTruck Ramen - Projet Web Première Année
+# FoodTruck Ramen - Projet Web Première Année
 
 Bienvenue sur **FoodTruck Ramen**, un projet fictif réalisé en première année dans le cadre de l'apprentissage du développement web. Ce site interactif et dynamique met en avant un food truck spécialisé dans les **ramens** à travers différentes pages essentielles.
 
 ## 🌟 Fonctionnalités Principales
 
-- 🏠 **Page d'accueil** : Un accès rapide aux différentes recettes et spécialités du food truck.
-- 📜 **Menu interactif** : Une interface dynamique permettant de naviguer facilement à travers les différents types de ramens proposés.
-- 🌍 **Page "À propos" bilingue** : Disponible en français et en anglais pour toucher un plus large public.
-- 📞 **Page de contact fictive** : Pour donner l'illusion d'une prise de contact avec l'équipe du food truck.
+- **Page d'accueil** : Un accès rapide aux différentes recettes et spécialités du food truck.
+- **Menu interactif** : Une interface dynamique permettant de naviguer facilement à travers les différents types de ramens proposés.
+- **Page "À propos" bilingue** : Disponible en français et en anglais pour toucher un plus large public.
+- **Page de contact fictive** : Pour donner l'illusion d'une prise de contact avec l'équipe du food truck.
 
 ## 💻 Technologies Utilisées
 
